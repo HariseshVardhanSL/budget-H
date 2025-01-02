@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BudgetH</title>
+    <link rel="icon" href="../TODO-HVM/h symol.jpg"/>
+    <link rel="stylesheet" href="./bud.css"/>
+    <style>
+        .tb{
+            font-family: "Kanit", serif;
+            font-weight: 900;
+            font-style:normal;
+            font-size: xx-large;
+        }
+        li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .delete-btn {
+            cursor: pointer;
+            margin-left: 10px; /* Space between the amount and the delete button */
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg">
+        <video autoplay muted loop class="video">
+            <source src="./v.mp4" type="video/webm"/>
+        </video>
+        <div class="title">
+            <center class="cen1">
+                <h1 class="tb">BUDGET</h1><span><img class="img1" src="../TODO-HVM/h symol.jpg"/></span>
+            </center>
+        </div>
+        <div id="top">
+            <div id="one">
+                <center>
+                    <h4 id="text">Amt in acc/Balance:</h4> <p id="balance">0</p>
+                </center>
+            </div>
+        </div>
+        <div class="main">
+            <!-- <center> -->
+                <!-- <div id="box1">
+                    <div id="four">
+                        <center>
+                            <h4 id="text3">Savings:</h4> <p id="sav">0</p>
+                        </center>
+                    </div>
+                </div> -->
+                <!-- <div class="top">
+                    <center>
+                        <div class="one1">
+                            <input type="datetime-local" id="dt"/>
+                        </div>
+                    </center>
+                </div> -->
+                <div id="nxt">
+                    <div id="three">
+                        <center>
+                            <h4 id="text2">Credited: </h4>  <p id="balance2">0</p>
+                        </center>
+                    </div>
+                    <div id="two">
+                        <center>
+                            <h4 id="text1">Debited: </h4>  <p id="balance1">0</p>
+                        </center>
+                    </div>
+                </div>
+            <!-- </center> -->
+             <div id="exp">
+                <h5 id="exp1">Do you want to reset to zero?</h5>
+                <button id="exp2" onclick="res()">debited amt </button>
+                <button id="exp2" onclick="res1()">credited amt</button>
+             </div>
+            <div id="b1">
+                <p id="t0">Balance</p>
+                <input type="number" id="inpsal" placeholder="Amount"/>
+                <button id="but0" onclick="one()">Update</button>
+            </div>
+            <div id="box0">
+                <p id="t">Spending limit</p>
+                <input type="number" id="inpbud" placeholder="spending limit"/>
+                <button id="but1" onclick="sl()">Update</button>
+            </div>
+            <!-- <div id="b2">
+                <p id="ts">Savings</p>
+                <input type="number" id="inpsav" placeholder="Savings"/>
+                <button id="buts" onclick="onesav()">Update</button>
+            </div> -->
+            <div id="box2">
+                <p id="t1">Debit</p>
+                <input type="text" id="inprea" placeholder="Reason"/>
+                <input type="number" id="inpspe" placeholder="Amt spent"/>
+                <button id="but2" onclick="debi()">-Debit</button>
+            </div>
+            <div id="box3">
+                <p id="t2">Credit</p>
+                <input type="text" id="inpreac" placeholder="Reason"/>
+                <input type="number" id="inpspec" placeholder="Amt received"/>
+                <button id="but3" onclick="cred()">+Credit</button>
+            </div>
+            <div id="box4">
+                <ul id="listcontainer">
+
+                </ul>
+            </div>
+        </div> 
+
+    </div>
+    <script src="./bud1.js"></script>
+    
+</body>
+</html>
